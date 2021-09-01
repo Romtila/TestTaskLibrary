@@ -6,6 +6,16 @@ namespace TestTaskLibrary
     {
         public int Radius { get; set; }
 
+        public Circle(int radius)
+        {
+            Radius = radius;
+        }
+
+        public Circle(Circle circle)
+        {
+            Radius = circle.Radius;
+        }
+
         public double CalculateSquare()
         {
             return Math.PI * Math.Pow(this.Radius, 2);
