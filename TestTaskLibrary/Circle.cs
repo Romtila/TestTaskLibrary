@@ -2,9 +2,9 @@
 
 namespace TestTaskLibrary
 {
-    public class Circle : IFigure<Circle>
+    public class Circle : IFigure
     {
-        public int Radius { get; set; }
+        public int Radius { get; private set; }
 
         public Circle(int radius)
         {
@@ -20,15 +20,23 @@ namespace TestTaskLibrary
         {
             return Math.PI * Math.Pow(this.Radius, 2);
         }
+    }
 
-        public double CalculateSquare(Circle circle)
+    public  class Rectangle : IFigure
+    {
+        public Rectangle(int b, int a)
         {
-            return Math.PI * Math.Pow(circle.Radius, 2);
+            B = b;
+            A = a;
         }
 
-        public double CalculateSquare(int radius)
+        public int A { get; private set; }
+
+        public int B { get; private set; }
+
+        public double CalculateSquare()
         {
-            return Math.PI * Math.Pow(radius, 2);
+            return this.A * this.B;
         }
     }
 }

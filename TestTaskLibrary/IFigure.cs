@@ -1,8 +1,7 @@
 ﻿namespace TestTaskLibrary
 {
-    public interface IFigure<in T>
+    public interface IFigure
     {
-        double CalculateSquare(T figure);
         double CalculateSquare();
     }
 }
