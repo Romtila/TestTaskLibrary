@@ -8,9 +8,6 @@ namespace TestTaskLibraryApp
         static void Main(string[] args)
         {
             var circle = new Circle(10);
-            
-
-
         }
     }
 }

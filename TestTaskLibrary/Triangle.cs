@@ -4,9 +4,24 @@ namespace TestTaskLibrary
 {
     public class Triangle : IFigure
     {
-        public int A { get; set; }
-        public int B { get; set; }
-        public int C { get; set; }
+
+        public int A { get; private set; }
+        public int B { get; private set; }
+        public int C { get; private set; }
+
+        public Triangle(int a, int b, int c)
+        {
+            A = a;
+            B = b;
+            C = c;
+        }
+
+        public Triangle(Triangle triangle)
+        {
+            A = triangle.A;
+            B = triangle.B;
+            C = triangle.C;
+        }
 
         public double CalculateSquare()
         {
